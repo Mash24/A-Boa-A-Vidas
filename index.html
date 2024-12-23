@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Page Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #f9f9f9; /* Light Gray Background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header/Navbar Styling */
+header {
+    background-color: #6d4f04; /* Rich gold background */
+    color: #333; /* dark color font color */
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5); /* Golden shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px; /* Increased padding for a larger navbar */
+}
+
+nav .logo img {
+    height: 150px; /* Adjust the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Aligns the menu to the right */
+}
+
+nav ul li {
+    margin-left: 30px; /* Increased margin for spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 16px;
+    transition: color 0.3s ease;
+    font-size: 30px; /* Increased font size for links */
+}
+
+nav ul li a:hover {
+    color: gold; /* Golden color on hover */
+    font-size: 40px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background: white;
+}
+
+/* Responsive: Show the Hamburger Menu */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logos2.png" alt="Your Logo" />
+            </div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to My Professional Website</h1>
+        <p>Your success starts here.</p>
+    </div>
+
+    <div class="content">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+    <title>A Boa A Vida</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+        <!-- Logo Section -->
+        <div class="logo">
+            <a href="/" aria-label="Go to Homepage">
+                <img src="logos1.png" alt="A Boa Vida Logo">
+            </a>
+        </div>
+
+        <!-- Menu Toggle Button (for Mobile) -->
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul id="navMenu">
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
+                    <span class="text">Contact Us</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="lorem1.jpg" alt="lorem1">
+                <div class="image-text">This is the first image description.</div>
+            </div>
+            <div class="slide">
+                <img src="lorem2.jpeg" alt="lorem2">
+                <div class="image-text">This is the second image description.</div>
+            </div>
+            <div class="slide">
+                <img src="lorem3.jpeg" alt="lorem3">
+                <div class="image-text">This is the third image description.</div>
+            </div>
+            <div class="slide">
+                <img src="lorem4.jpg" alt="lorem4">
+                <div class="image-text">This is the fourth image description.</div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

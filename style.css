@@ -1,0 +1,473 @@
+<<<<<<< HEAD
+/* General Page Reset */
+* {
+=======
+*{
+>>>>>>> 78381ef (Replaced old files with new ones)
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+<<<<<<< HEAD
+/* Body Styling */
+body {
+    background-color: #f9f9f9; /* Light Gray Background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header/Navbar Styling */
+header {
+    background-color: #000; /* Black background for your logo */
+    color: #fff; /* White font color */
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5); /* Golden shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+=======
+body, html{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Header styling section*/
+:root {
+    --text-color: #fff;
+    --highlight-color: rgb(255, 215, 0);
+    --hover-bg: rgba(255, 215, 0, 0.1);
+}
+
+
+body{
+    color: rgb(163, 121, 15);
+    background-color: #f5f5dc;
+    padding-top: 10px; /*space above the the menu, logo*/
+    line-height: 1.6;
+}
+
+nav .logo img {
+    height: 200px; /*adjust the height of the logo*/
+    width: auto; /*maintains aspect ratio*/
+}
+
+/*Header and navbar styling*/
+header{
+    background-color: rgb(163, 121, 15);
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
+    position: sticky;
+    top: 0;
+>>>>>>> 78381ef (Replaced old files with new ones)
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+<<<<<<< HEAD
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px gold; /* Logo shadow */
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Aligns the menu to the right */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: gold; /* Golden color on hover */
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none; /* Hide by default */
+=======
+    z-index: 1000;
+}
+
+header, nav{
+    margin: 0 auto;
+    width: 100%;
+}
+
+nav, header{
+    border: 1px solid black; /*puts the black line on the navigation bar*/
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Separate logo and menu */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 0; /* Prevents the logo from expanding */
+}
+
+/*logo styling*/
+nav .logo{
+    display: flex;
+    align-items: center; /*aligns logo and menu vertically*/
+    font-size: 50px; /*changes the size of the menu items*/
+    flex: 0; /* Prevent the logo from expanding */
+    font-weight: bold;
+    text-shadow: 1px 1px 5px goldenrod;
+}
+
+nav .logo img{
+    height: 100px; /*ajust logo size*/
+    width: auto;
+}
+
+.navigation {
+    display: flex; /* Align logo and menu side-by-side */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+    background-color: rgb(163, 121, 15); /* Matches menu background */
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+
+nav ul li {
+    text-align: center;
+    margin-left: 30px; /*spacing between menu*/
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 15px; /*space out more*/
+    transition: color 0.3s ease, font-size 0.3s ease;
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    color: rgb(255, 215, 0); /*hovering color*/
+    font-size: 20px; /*controls how menu hovers (how drastic(*/
+}
+
+/*mobile devices*/
+.menu-toggle{
+    display: none; /*Hidden by default only show on mobile*/
+>>>>>>> 78381ef (Replaced old files with new ones)
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+<<<<<<< HEAD
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background: white;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('your-background-image.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Content Section */
+.content {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 20px;
+    box-shadow: 0px -4px 8px rgba(255, 215, 0, 0.3); /* Golden shadow */
+}
+
+footer a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive: Show the Hamburger Menu */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu */
+    }
+}
+=======
+    z-index: 1001; /* Ensure it appears above the menu */
+    position: relative;
+}
+
+/*making the three lines toggle button*/
+.menu-toggle span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: white;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+/* Transform lines into an "X" when the toggle is open */
+.menu-toggle.open span{
+    background: transparent; /*Hide the default spans*/
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open::before,
+.menu-toggle.open::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: white; /* Color for the X */
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.open::before {
+    transform: rotate(45deg); /* First line of the X */
+}
+
+.menu-toggle.open::after {
+    transform: rotate(-45deg); /* Second line of the X */
+}
+
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Top line rotates */
+}
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0; /* Middle line disappears */
+}
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Bottom line rotates */
+}
+
+/* Responsive design: Show toggle button and adjust menu for small screens */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    #navMenu {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(100%); /* Initially position off-screen to the right */
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 20px; /* Add space between menu items */
+        list-style: none;
+        margin: 0;
+        padding: 10px 0; /* Add spacing inside the menu */
+        background-color: rgb(163, 121, 15); /* Match navbar background */
+        position: absolute; /* Keep menu dropdown within navigation */
+        top: 0; /* Align with the top */
+        right: 0; /* Position it to the right side */
+        width: 100%; /* Set width for the menu */
+        height: 100vh; /* Take full height */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+        z-index: 999; /* Ensure menu appears above other elements */
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out; /*smooth slide transition*/
+    }
+
+    #navMenu.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0); /* Slide the menu in from the right */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items */
+        gap: 10px; /* Space between items */
+    }
+
+    #navMenu li {
+        border-bottom: 1px solid black; /* Add line below menu items */
+        padding: 1px 0; /* Add space for "ruled" effect */
+    }
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation .list {
+    position: relative;
+}
+
+.navigation .list a{
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.navigation .list.active a, .navigation .list a:hover{
+    background-color: var(--hover-bg);
+    color: var(--highlight-color);
+    border-radius: 10px;
+}
+
+.icon{
+    font-size: 40px;
+}
+
+
+/*Image styling section*/
+.image-slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide{
+    position: absolute; /*images lie on each other*/
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 5s ease-in-out;  /*you can reduce for shorter transition*/
+}
+
+.slide img{
+    width: 100%; /*image fills in the page*/
+    height: 100%;
+    object-fit: cover; /*ensures image coves the entire area*/
+}
+
+
+/* Add texts on top of the images*/
+.image-text{
+    position: absolute;
+    top: 50%;
+    left: 50%; /*Position the text at the center*/
+    transform: translate(-50%, -50%);
+    color: red; /* Change this later*/
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+
+    /*Initial state for the sliding animation*/
+    opacity: 0;
+    transform: translate(-50%, -60%); /*Slightly above the center initially*/
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+/*Responsive adjustments*/
+@media screen and (max-width: 768) {
+    .image-slider{
+        height: 50vh; /*Adjust height for smaller screens*/
+    }
+    .image-text{
+        font-size: 24px; /*Smaller text size for mobile*/
+        padding: 5px 10px; /*Adjust padding*/
+    }
+}
+
+.slide.active .image-text{
+    opacity: 1; /*Final state when the slide is active*/
+    transform: translate(-50%, -50%); /*Slides into the center*/
+}
+
+.slide:not(.active) .image-text{
+    opacity: 0; /*Fade out*/
+    transform: translate(-50%, 100%); /* Slide down and off-screen*/
+}
+
+>>>>>>> 78381ef (Replaced old files with new ones)

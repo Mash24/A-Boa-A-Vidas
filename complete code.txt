@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="lorem1.jpg" alt="lorem1">
+                <div class="image-text">This is the first image description.</div>
+            </div>
+            <div class="slide">
+                <img src="lorem2.jpeg" alt="lorem2">
+                <div class="image-text">This is the second image description.</div>
+            </div>
+            <div class="slide">
+                <img src="lorem3.jpeg" alt="lorem3">
+                <div class="image-text">This is the third image description.</div>
+            </div>
+            <div class="slide">
+                <img src="lorem4.jpg" alt="lorem4">
+                <div class="image-text">This is the fourth image description.</div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+Styling CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image-slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide{
+    position: absolute; /*images lie on each other*/
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+}
+
+.slide img{
+    width: 100%; /*image fills in the page*/
+    height: 100%;
+    object-fit: cover; /*ensures image coves the entire area*/
+}
+
+
+/* Add texts on top of the images*/
+.image-text{
+    position: absolute;
+    top: 50%;
+    left: 50%; /*Position the text at the center*/
+    transform: translate(-50%, -50%);
+    color: red; /* Change this later*/
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    /*Initial state for the sliding animation*/
+
+    opacity: 0;
+    transform: translate(-50%, -60%); /*Slightly above the center initially*/
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide.active .image-text{
+    opacity: 1; /*Final state when the slide is active*/
+    transform: translate(-50%, -50%); /*Slides into the center*/
+}
+
+.slide:not(.active) .image-text{
+    opacity: 0; /*Fade out*/
+    transform: translate(-50%, 100%); /* Slide down and off-screen*/
+}
+
+
+JavaScript
+const slidesEl = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+function showSlide(index){
+    slidesEl.forEach((slide, i) =>{
+        slide.classList.remove('active');
+        if(i === index){
+            slide.classList.add('active');
+            slide.style.opacity = 1; //Make the current slide visible//
+            
+        }else {
+            slide.style.opacity = 0; //Hide other slides
+        }
+    });
+}
+
+function nextSlide(){
+    currentIndex = (currentIndex + 1) % slidesEl.length;
+    showSlide(currentIndex);
+}
+
+// Show the first slide innitially
+showSlide(currentIndex);
+
+//change slide every 5 seconds
+setInterval(nextSlide, 5000);
+
