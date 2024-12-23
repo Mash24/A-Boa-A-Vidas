@@ -1,38 +1,14 @@
-<<<<<<< HEAD
-/* General Page Reset */
-* {
-=======
 *{
->>>>>>> 78381ef (Replaced old files with new ones)
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-<<<<<<< HEAD
-/* Body Styling */
-body {
-    background-color: #f9f9f9; /* Light Gray Background */
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header/Navbar Styling */
-header {
-    background-color: #000; /* Black background for your logo */
-    color: #fff; /* White font color */
-    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5); /* Golden shadow */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-=======
 body, html{
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 /*Header styling section*/
 :root {
@@ -61,46 +37,10 @@ header{
     box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
     position: sticky;
     top: 0;
->>>>>>> 78381ef (Replaced old files with new ones)
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-<<<<<<< HEAD
-}
-
-nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px gold; /* Logo shadow */
-}
-
-/* Navigation Links */
-nav ul {
-    list-style: none;
-    display: flex;
-    margin-left: auto; /* Aligns the menu to the right */
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: gold; /* Golden color on hover */
-}
-
-/* Mobile Menu Toggle */
-.menu-toggle {
-    display: none; /* Hide by default */
-=======
     z-index: 1000;
 }
 
@@ -120,6 +60,7 @@ nav {
     padding: 10px 20px;
     width: 100%;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -176,108 +117,10 @@ nav ul li a:hover{
 /*mobile devices*/
 .menu-toggle{
     display: none; /*Hidden by default only show on mobile*/
->>>>>>> 78381ef (Replaced old files with new ones)
     flex-direction: column;
     cursor: pointer;
     background: none;
     border: none;
-<<<<<<< HEAD
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 4px;
-    background: white;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-    background-image: url('your-background-image.jpg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-/* Content Section */
-.content {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fff;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content h2 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 32px;
-}
-
-.content p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: 20px;
-    box-shadow: 0px -4px 8px rgba(255, 215, 0, 0.3); /* Golden shadow */
-}
-
-footer a {
-    color: gold;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #fff;
-}
-
-/* Responsive: Show the Hamburger Menu */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide menu by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust based on your header height */
-        left: 0;
-        width: 100%;
-        background-color: black;
-    }
-
-    nav ul.show {
-        display: flex; /* Show menu when toggled */
-    }
-
-    .menu-toggle {
-        display: flex; /* Show the hamburger menu */
-    }
-}
-=======
     z-index: 1001; /* Ensure it appears above the menu */
     position: relative;
 }
@@ -469,5 +312,3 @@ footer a:hover {
     opacity: 0; /*Fade out*/
     transform: translate(-50%, 100%); /* Slide down and off-screen*/
 }
-
->>>>>>> 78381ef (Replaced old files with new ones)
