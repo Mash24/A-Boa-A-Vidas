@@ -595,3 +595,22 @@ p{
         padding: 10px 15px;
     }
 }
+
+/* Mobile View for very small devices (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+    /* Further reduce header font size */
+    .specialties header{
+        font-size: 30px;
+    }
+
+    /* Even smaller images for mobile phones */
+    .specialties-container img{
+        max-width: 90%;
+    }
+
+    /* Adjust description font size and padding for smaller screens */
+    .description{
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
