@@ -570,3 +570,28 @@ p{
     visibility: visible; /* Allows it to be focusable*/
     cursor: pointer;
 }
+
+/* Mobile view: Adjusting Layout for smaller screens */
+@media (max-width: 768px){
+    .specialties header{
+        font-size: 36px; /* Adjust header font size for mobile */
+    }
+    
+    /* Switch to 1-column layout for mobile */
+    .specialties-container{
+        grid-template-columns: 1fr; /*Stacks  items vertically */
+        margin-top: 50px;
+    }
+
+    /* Adjust image size to fit mobile */
+    .specialties-container img{
+        max-width: 100%; /* Makes the image fully responsive */
+        margin-bottom: 20px; /*Space between images */
+    }
+
+    /* Adjust description font size for mobile */
+    .description{
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+}
