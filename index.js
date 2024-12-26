@@ -26,6 +26,9 @@ function showSlide(index){
     });
 }
 
+/**
+ * // Advances to the next slide in a slideshow, looping back to the first slide if at the end.
+ */
 function nextSlide(){
     currentIndex = (currentIndex + 1) % slidesEl.length;
     showSlide(currentIndex);

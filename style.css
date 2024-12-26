@@ -389,7 +389,6 @@ p{
     background-color: rgb(153, 114, 15);
 }
 
-
 .vision-mission h2{
     font-weight: bold;
     margin-bottom: 20px;
@@ -482,12 +481,27 @@ p{
 
 /* General styling for the specialties section */
 
+.specialties header{
+    justify-content: center;
+    width: 30%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333; /* Set text color */
+    text-align: center; /* Center text */
+    margin: 20px 0;  /* Add space above and below */
+    padding: 10px 20px;
+    z-index: 10; /* Ensure it stays above other elements */
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
 .specialties{
     display: flex;
+    flex-direction: column; /* Aligns vertically */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
     min-height: 100vh; /* Makes the section occupy the full viewport height */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://picsum.photos/id/110/1080);
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Keeps it at a fixed point even upon scrolling */
@@ -496,19 +510,18 @@ p{
     font-family: Arial, sans-serif;
     padding: 40px; /* Ensures content doesn't touch the edges */
 }
-
+ 
 .specialties header{
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem;
     font-weight: bold;
     color: #333;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px;
     padding: 10px 20px;
-    z-index: 10; /* Ensures it styas above other elements */
+    z-index: 10; /* Ensures it styles above other elements */
 }
 
 /* General styling for the container */
@@ -571,6 +584,21 @@ p{
     cursor: pointer;
 }
 
+.specialties, .team {
+    /* display: flex; */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    min-height: 100vh; /* Makes the section occupy the full viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://picsum.photos/id/110/1080);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps it at a fixed point even upon scrolling */
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 40px; /* Ensures content doesn't touch the edges */
+}
+
 /* Mobile view: Adjusting Layout for smaller screens */
 @media (max-width: 768px){
     .specialties header{
@@ -612,5 +640,134 @@ p{
     .description{
         font-size: 18px;
         padding: 8px 12px;
+    }
+}
+
+/* General styling for the Team section */
+
+@media (max-width: 768px) {
+    header {
+        font-size: 2em; /* Adjusts the font size for tablets */
+    }
+    header::after {
+        width: 80px; /* Adjusts the underline width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5em; /* Adjusts the font size for mobile phones */
+    }
+    header::after {
+        width: 60px; /* Adjusts the underline width for mobile phones */
+    }
+}
+
+/* Styling the underline for the header using a pseudo-element */
+header::after {
+    content: ''; /* Adds a decorative line */
+    display: block; /* Ensures the line behaves like a block element */
+    width: 100px; /* Sets the line's width */
+    height: 3px; /* Sets the line's height */
+    background: #000; /* Colors the line black */
+    margin: 10px auto 0; /* Centers the line and adds spacing */
+}
+
+/* Styling the container for the team members */
+.team{
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+}
+
+/* Styling the header text of the Team section */
+header {
+    justify-content: center;
+    /* width: 50%; */
+    text-align: center; /* Centers the header text */
+    position: relative; /* Allows for pseudo-elements like ::after */
+    padding: 10px 20; /* Adds vertical spacing */
+    font-size: 3em; /* Makes the font size larger */
+    color: rgb(244, 243, 241);
+    font-weight: bold; /* Makes the text bold */
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    box-shadow: none;
+    z-index: 10;
+}
+
+.team-container {
+    display: grid; /* Creates a grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Divides the container into 4 equal columns */
+    gap: 20px; /* Adds spacing between grid items */
+    justify-items: center; /* Centers items horizontally in their grid cells */
+    padding: 20px; /* Adds padding around the container */
+}
+
+/* Styling each team member's container (span) */
+.team-container span {
+    position: relative; /* Allows for positioning child elements like .team-name */
+    overflow: hidden; /* Hides content that overflows the span boundary */
+}
+
+/* Styling the team member images */
+.team-container img {
+    width: 100%; /* Makes the image responsive to the container's size */
+    height: auto; /* Maintains the image's aspect ratio */
+    max-width: 300px; /* Limits the image's maximum width */
+    border-radius: 15px; /* Adds rounded corners to the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for scaling and shadow effects */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Styling the name overlay that appears on hover */
+.team-name {
+    position: absolute; /* Positions the name over the image */
+    top: 50%; /* Centers the name vertically */
+    left: 50%; /* Centers the name horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for the element's dimensions */
+    text-align: center; /* Centers the text inside the element */
+    font-size: 1.5em; /* Sets a larger font size */
+    font-weight: bold; /* Makes the text bold */
+    color: white; /* Sets the text color to white */
+    visibility: hidden; /* Hides the name by default */
+    opacity: 0; /* Makes the name fully transparent by default */
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth transition for the opacity */
+}
+
+/* Hover effect for scaling the image */
+.team-container span:hover img {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow to the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for displaying the team member's name */
+.team-container span:hover .team-name {
+    visibility: visible; /* Makes the name visible */
+    opacity: 1; /* Makes the name fully opaque */
+}
+
+/* Responsive Grid Adjustments */
+/* For tablets (max-width: 768px): 2 columns */
+@media screen and (max-width: 768px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    }
+}
+
+/* For mobile devices (max-width: 480px): Single column */
+@media screen and (max-width: 480px) {
+    .team-container {
+        grid-template-columns: 1fr; /* One column per row */
     }
 }
