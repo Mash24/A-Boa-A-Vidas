@@ -298,7 +298,7 @@ nav ul li a:hover{
         height: 50vh; /*Adjust height for smaller screens*/
     }
     .image-text{
-        font-size: 24px; /*Smaller text size for mobile*/
+        font-size: 10px; /*Smaller text size for mobile*/
         padding: 5px 10px; /*Adjust padding*/
     }
 }
@@ -316,7 +316,7 @@ nav ul li a:hover{
 /*Vision section styling*/
 .vision-container{
     display: flex;
-        text-align: center;
+    text-align: center;
     flex-direction: column;
     justify-content: space-around;
     background-color: rgba(255, 255, 255, 0.1);
@@ -478,4 +478,95 @@ p{
     .col-md-5 {
         width: 60%; /* Adjust width of cards on medium screens */
     }
+}
+
+/* General styling for the specialties section */
+
+.specialties{
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    min-height: 100vh; /* Makes the section occupy the full viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://picsum.photos/id/110/1080);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps it at a fixed point even upon scrolling */
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 40px; /* Ensures content doesn't touch the edges */
+}
+
+.specialties header{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    z-index: 10; /* Ensures it styas above other elements */
+}
+
+/* General styling for the container */
+.specialties-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking an equal fraction of the space */
+    gap: 50px; /* Add spaces or gaps between images */
+    width: 95%; /* Ensures the grid spans most of the section's width */
+    max-width: 1600px; /* Limits the width for large screens */
+    margin-top: 100px;
+    padding: 20px; /* Adds margin up above the first column */
+}
+
+/* styling each span */
+.specialties-container span{
+    position: relative; /* Enables positioning of the description over the image */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    text-align: center;
+}
+
+/* Image styling */
+.specialties-container img{
+    width: 100%; /* Make the images responsive */
+    max-width: 700px; /* Ensures the aspect ratio is maintained */
+    height: auto;
+    border-radius: 15px; /* Optional: And rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Creates a more prominent shadow */
+    transition: transform 0.3s ease; /*Smooth scale effect on hover*/
+}
+
+/* Scale image slightly on hover */
+.specialties-container span:hover img{
+    transform: scale(1.15); /* Enlarges the image slightly */
+    cursor: pointer;
+}
+
+/* Description styling */
+.description{
+    position: absolute; /* Positions the description on top of the image */
+    top: 50%; /* Centers the text vertically */
+    left: 50%; /* Centers the text horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the centering */
+    font-size: 28px;
+    font-weight: bold;
+    color: white; /* Color of the description text. Change according to the image color */
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border-radius: 10px;
+    opacity: 0; /* Hides the description by default */
+    visibility: hidden; /* Ensure it's not focusable when hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show description on hover */
+.specialties-container span:hover .description{
+    opacity: 1; /* Makes the description visible */
+    visibility: visible; /* Allows it to be focusable*/
+    cursor: pointer;
 }
