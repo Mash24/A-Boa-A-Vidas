@@ -5,7 +5,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body, html{
+.navigation body, html{
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
@@ -18,7 +18,7 @@ body, html{
 }
 
 
-body{
+.navigation body{
     color: rgb(163, 121, 15);
     background-color: #f5f5dc;
     padding-top: 10px; /*space above the the menu, logo*/
@@ -31,7 +31,7 @@ nav .logo img {
 }
 
 /*Header and navbar styling*/
-header{
+.navigation header{
     background-color: rgb(163, 121, 15);
     color: #fff;
     box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
@@ -44,16 +44,16 @@ header{
     z-index: 1000;
 }
 
-header, nav{
+.navigation header, nav{
     margin: 0 auto;
     width: 100%;
 }
 
-nav, header{
+.navigation nav, header{
     border: 1px solid black; /*puts the black line on the navigation bar*/
 }
 
-nav {
+.navigation nav {
     display: flex;
     justify-content: space-between; /* Separate logo and menu */
     align-items: center;
@@ -70,7 +70,7 @@ nav {
 }
 
 /*logo styling*/
-nav .logo{
+.navigation nav .logo{
     display: flex;
     align-items: center; /*aligns logo and menu vertically*/
     font-size: 50px; /*changes the size of the menu items*/
