@@ -281,7 +281,6 @@ nav ul li a:hover{
     transform: translate(-50%, -50%);
     color: rgb(43, 255, 0); /* Change this later*/
     font-size: 40px;
-    padding: 10px 20px;
     text-align: center;
 
     /*Initial state for the sliding animation*/
@@ -296,8 +295,8 @@ nav ul li a:hover{
         height: 50vh; /*Adjust height for smaller screens*/
     }
     .image-text{
-        font-size: 10px; /*Smaller text size for mobile*/
-        padding: 5px 10px; /*Adjust padding*/
+        font-size: 15px; /*Smaller text size for mobile*/
+        transform: translate(-50%, -50%);
     }
 }
 
