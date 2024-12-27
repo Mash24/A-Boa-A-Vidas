@@ -480,20 +480,8 @@ p{
 }
 
 /* General styling for the specialties section */
-
-.specialties header{
-    justify-content: center;
-    width: 30%;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333; /* Set text color */
-    text-align: center; /* Center text */
-    margin: 20px 0;  /* Add space above and below */
-    padding: 10px 20px;
-    z-index: 10; /* Ensure it stays above other elements */
-    background: none;
-    border: none;
-    box-shadow: none;
+.specialties h2{
+    text-transform: uppercase;
 }
 
 .specialties{
@@ -511,19 +499,6 @@ p{
     padding: 40px; /* Ensures content doesn't touch the edges */
 }
  
-.specialties header{
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin: 20px;
-    padding: 10px 20px;
-    z-index: 10; /* Ensures it styles above other elements */
-}
-
 /* General styling for the container */
 .specialties-container{
     display: grid;
@@ -674,36 +649,32 @@ header::after {
 }
 
 /* Styling the container for the team members */
+.team h2{
+    position: relative;
+    top: 0;
+    text-transform: uppercase;
+    align-items: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 1rem 0;
+    /* margin-left: 50%; */
+}
+
 .team{
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 50vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 40px;
+    padding: 5rem 1rem;
 }
 
 /* Styling the header text of the Team section */
-header {
-    justify-content: center;
-    /* width: 50%; */
-    text-align: center; /* Centers the header text */
-    position: relative; /* Allows for pseudo-elements like ::after */
-    padding: 10px 20; /* Adds vertical spacing */
-    font-size: 3em; /* Makes the font size larger */
-    color: rgb(244, 243, 241);
-    font-weight: bold; /* Makes the text bold */
-    text-transform: uppercase;
-    background: none;
-    border: none;
-    box-shadow: none;
-    z-index: 10;
-}
 
 .team-container {
     display: grid; /* Creates a grid layout */
