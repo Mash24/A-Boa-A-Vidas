@@ -279,11 +279,9 @@ nav ul li a:hover{
     top: 50%;
     left: 50%; /*Position the text at the center*/
     transform: translate(-50%, -50%);
-    color: red; /* Change this later*/
+    color: rgb(43, 255, 0); /* Change this later*/
     font-size: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
-    border-radius: 5px;
     text-align: center;
 
     /*Initial state for the sliding animation*/
